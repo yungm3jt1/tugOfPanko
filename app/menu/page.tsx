@@ -1,5 +1,6 @@
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import GameLobby from "@/components/GameLobby";
 
 export default async function MenuPage() {
   const cookieStore = await cookies();
@@ -16,12 +17,7 @@ export default async function MenuPage() {
         Welcome, <strong>{username}</strong>!
       </p>
 
-      <div style={{ marginTop: "20px" }}>
-        <p>Socket.io connection will be established here.</p>
-        <button style={{ padding: "10px 20px", fontSize: "16px" }}>
-          Start Game
-        </button>
-      </div>
+      <GameLobby username={username} />
     </div>
   );
 }

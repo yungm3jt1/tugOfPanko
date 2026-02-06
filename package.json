@@ -1,5 +1,10 @@
 {
-  "name": "top",
+    "scripts": {
+    "dev": "ts-node --project tsconfig.server.json server.ts",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },: "top",
   "version": "0.1.0",
   "private": true,
   "scripts": {
